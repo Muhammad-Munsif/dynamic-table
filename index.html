@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynamic Table with Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Enter User Info</h2>
+  <form id="dataForm">
+    <input type="text" id="name" placeholder="Enter name" required>
+    <input type="email" id="email" placeholder="Enter email" required>
+    <button type="submit" class="btn">Add to Table</button>
+  </form>
+
+  <div class="table-container">
+    <table id="dynamicTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dynamic rows will appear here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
