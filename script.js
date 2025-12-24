@@ -1,4 +1,4 @@
- <script>
+
     const form = document.getElementById("dataForm");
     const tableBody = document.getElementById("dynamicTable").getElementsByTagName("tbody")[0];
     const toast = document.getElementById("toast");
@@ -240,4 +240,3 @@
         }, 100);
       });
     });
-  </script>
