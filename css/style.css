@@ -16,7 +16,6 @@
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --transition: all 0.3s ease;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -33,20 +32,17 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
 .container {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }
-
 header {
   text-align: center;
   margin-bottom: 40px;
   width: 100%;
 }
-
 h1 {
   font-size: 2.5rem;
   color: var(--primary-color);
@@ -55,7 +51,6 @@ h1 {
   position: relative;
   display: inline-block;
 }
-
 h1::after {
   content: "";
   position: absolute;
@@ -71,13 +66,11 @@ h1::after {
   transform: translateX(-50%);
   border-radius: 2px;
 }
-
 .subtitle {
   color: var(--gray-dark);
   font-size: 1.1rem;
   margin-top: 20px;
 }
-
 .card {
   background-color: white;
   border-radius: var(--border-radius);
@@ -87,13 +80,11 @@ h1::after {
   width: 100%;
   transition: var(--transition);
 }
-
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
-
 h2 {
   color: var(--primary-color);
   margin-bottom: 25px;
@@ -102,11 +93,9 @@ h2 {
   align-items: center;
   gap: 10px;
 }
-
 h2 i {
   color: var(--secondary-color);
 }
-
 /* Form Styles */
 #dataForm {
   display: grid;
@@ -114,32 +103,27 @@ h2 i {
   gap: 20px;
   align-items: end;
 }
-
 .form-group {
   display: flex;
   flex-direction: column;
 }
-
 label {
   font-weight: 600;
   margin-bottom: 8px;
   color: var(--dark-color);
   font-size: 0.95rem;
 }
-
 .input-with-icon {
   position: relative;
   display: flex;
   align-items: center;
 }
-
 .input-with-icon i {
   position: absolute;
   left: 15px;
   color: var(--gray);
   font-size: 1.1rem;
 }
-
 input {
   padding: 14px 15px 14px 45px;
   width: 100%;
@@ -149,17 +133,14 @@ input {
   transition: var(--transition);
   background-color: var(--light-color);
 }
-
 input:focus {
   outline: none;
   border-color: var(--primary-color);
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
 }
-
 input::placeholder {
   color: var(--gray);
 }
-
 .btn {
   padding: 14px 25px;
   border: none;
@@ -175,7 +156,6 @@ input::placeholder {
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
 .btn-primary {
   background: linear-gradient(
     to right,
@@ -185,7 +165,6 @@ input::placeholder {
   color: white;
   box-shadow: 0 4px 6px rgba(79, 70, 229, 0.25);
 }
-
 .btn-primary:hover {
   background: linear-gradient(
     to right,
@@ -195,40 +174,33 @@ input::placeholder {
   transform: translateY(-3px);
   box-shadow: 0 10px 15px rgba(79, 70, 229, 0.3);
 }
-
 .btn-primary:active {
   transform: translateY(0);
 }
-
 .btn-danger {
   background: linear-gradient(to right, var(--danger-color), #dc2626);
   color: white;
   box-shadow: 0 4px 6px rgba(239, 68, 68, 0.25);
 }
-
 .btn-danger:hover {
   background: linear-gradient(to right, #dc2626, var(--danger-color));
   transform: translateY(-3px);
   box-shadow: 0 10px 15px rgba(239, 68, 68, 0.3);
 }
-
 .btn-warning {
   background: linear-gradient(to right, var(--warning-color), #d97706);
   color: white;
   box-shadow: 0 4px 6px rgba(245, 158, 11, 0.25);
 }
-
 .btn-warning:hover {
   background: linear-gradient(to right, #d97706, var(--warning-color));
   transform: translateY(-3px);
   box-shadow: 0 10px 15px rgba(245, 158, 11, 0.3);
 }
-
 .btn-sm {
   padding: 8px 15px;
   font-size: 0.9rem;
 }
-
 /* Table Styles */
 .table-container {
   width: 100%;
@@ -238,14 +210,12 @@ input::placeholder {
   background-color: white;
   margin-top: 10px;
 }
-
 table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   min-width: 600px;
 }
-
 thead {
   background: linear-gradient(
     to right,
@@ -253,7 +223,6 @@ thead {
     var(--primary-dark)
   );
 }
-
 th {
   color: white;
   font-weight: 600;
@@ -261,19 +230,15 @@ th {
   padding: 18px 15px;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 th:last-child {
   border-right: none;
 }
-
 th:first-child {
   border-radius: var(--border-radius) 0 0 0;
 }
-
 th:last-child {
   border-radius: 0 var(--border-radius) 0 0;
 }
-
 tbody tr {
   transition: var(--transition);
 }
