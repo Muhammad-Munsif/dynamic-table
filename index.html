@@ -1,94 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dynamic Table with Form</title>
   <link rel="stylesheet" href="style.css">
   <style>
     body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-}
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
 
-h2 {
-  margin-bottom: 10px;
-}
+    h2 {
+      margin-bottom: 10px;
+    }
 
-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 20px;
-}
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
 
-input {
-  padding: 8px;
-  width: 200px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
+    input {
+      padding: 8px;
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
 
-.btn {
-  padding: 8px 16px;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  border-radius: 4px;
-}
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
 
-.btn.delete {
-  background-color: #dc3545;
-}
+    .btn.delete {
+      background-color: #dc3545;
+    }
 
-.table-container {
-  width: 100%;
-  overflow-x: auto;
-}
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+    }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
 
-th, td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: left;
-}
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
 
-th {
-  background-color: #f4f4f4;
-}
+    th {
+      background-color: #f4f4f4;
+    }
 
-@media (max-width: 600px) {
-  table, thead, tbody, th, td, tr {
-    display: block;
-  }
+    @media (max-width: 600px) {
 
-  thead tr {
-    display: none;
-  }
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr {
+        display: block;
+      }
 
-  td {
-    position: relative;
-    padding-left: 50%;
-    border: none;
-    border-bottom: 1px solid #ddd;
-  }
+      thead tr {
+        display: none;
+      }
 
-  td::before {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-weight: bold;
-    content: attr(data-label);
-  }
-}
+      td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #ddd;
+      }
+
+      td::before {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-weight: bold;
+        content: attr(data-label);
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <h2>Enter User Info</h2>
@@ -115,39 +124,40 @@ th {
 
   <script src="script.js">
     const form = document.getElementById("dataForm");
-const tableBody = document.getElementById("dynamicTable").getElementsByTagName("tbody")[0];
+    const tableBody = document.getElementById("dynamicTable").getElementsByTagName("tbody")[0];
 
-form.addEventListener("submit", function(event) {
-  event.preventDefault();
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
 
-  if (name === "" || email === "") return;
+      if (name === "" || email === "") return;
 
-  const newRow = tableBody.insertRow();
+      const newRow = tableBody.insertRow();
 
-  const nameCell = newRow.insertCell(0);
-  const emailCell = newRow.insertCell(1);
-  const actionCell = newRow.insertCell(2);
+      const nameCell = newRow.insertCell(0);
+      const emailCell = newRow.insertCell(1);
+      const actionCell = newRow.insertCell(2);
 
-  nameCell.setAttribute("data-label", "Name");
-  emailCell.setAttribute("data-label", "Email");
-  actionCell.setAttribute("data-label", "Action");
+      nameCell.setAttribute("data-label", "Name");
+      emailCell.setAttribute("data-label", "Email");
+      actionCell.setAttribute("data-label", "Action");
 
-  nameCell.textContent = name;
-  emailCell.textContent = email;
-  actionCell.innerHTML = `<button class="btn delete" onclick="deleteRow(this)">Delete</button>`;
+      nameCell.textContent = name;
+      emailCell.textContent = email;
+      actionCell.innerHTML = `<button class="btn delete" onclick="deleteRow(this)">Delete</button>`;
 
-  // Clear form
-  form.reset();
-});
+      // Clear form
+      form.reset();
+    });
 
-function deleteRow(button) {
-  const row = button.closest("tr");
-  row.remove();
-}
+    function deleteRow(button) {
+      const row = button.closest("tr");
+      row.remove();
+    }
   </script>
 
 </body>
+
 </html>
