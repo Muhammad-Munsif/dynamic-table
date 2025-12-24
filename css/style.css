@@ -275,50 +275,41 @@ td {
   font-size: 1.1rem;
   margin-right: 10px;
 }
-
 .user-info {
   display: flex;
   align-items: center;
 }
-
 .user-details {
   display: flex;
   flex-direction: column;
 }
-
 .user-name {
   font-weight: 600;
   color: var(--dark-color);
 }
-
 .user-email {
   font-size: 0.9rem;
   color: var(--gray-dark);
   margin-top: 3px;
 }
-
 .action-buttons {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
-
 .empty-state {
   text-align: center;
   padding: 50px 20px;
   color: var(--gray);
 }
-
 .empty-state i {
   font-size: 3rem;
   margin-bottom: 20px;
   color: var(--gray-light);
 }
-
 .empty-state p {
   font-size: 1.2rem;
 }
-
 /* Status Badge */
 .status-badge {
   display: inline-block;
@@ -329,17 +320,14 @@ td {
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
 .status-active {
   background-color: rgba(16, 185, 129, 0.1);
   color: var(--secondary-color);
 }
-
 .status-pending {
   background-color: rgba(245, 158, 11, 0.1);
   color: var(--warning-color);
 }
-
 /* Responsive Styles */
 @media (max-width: 768px) {
   body {
@@ -371,7 +359,6 @@ td {
     min-width: 100%;
   }
 }
-
 @media (max-width: 576px) {
   h1 {
     font-size: 1.8rem;
@@ -394,7 +381,6 @@ td {
   .user-avatar {
     margin-bottom: 10px;
   }
-
   /* Stack table on very small screens */
   @media (max-width: 480px) {
     thead {
@@ -448,7 +434,6 @@ td {
     }
   }
 }
-
 /* Footer */
 footer {
   text-align: center;
@@ -459,7 +444,6 @@ footer {
   padding: 20px 0;
   border-top: 1px solid var(--gray-light);
 }
-
 /* Notification Toast */
 .toast {
   position: fixed;
@@ -477,19 +461,15 @@ footer {
   align-items: center;
   gap: 10px;
 }
-
 .toast.show {
   transform: translateX(0);
 }
-
 .toast-success {
   background: linear-gradient(to right, var(--secondary-color), #059669);
 }
-
 .toast-danger {
   background: linear-gradient(to right, var(--danger-color), #dc2626);
 }
-
 .toast i {
   font-size: 1.2rem;
 }
