@@ -9,6 +9,9 @@
   --gray-light: #e2e8f0;
   --gray: #94a3b8;
   --gray-dark: #475569;
+    --info-color: #3b82f6;
+  --incomplete-color: #f97316;
+  --in-progress-color: #8b5cf6;
   --border-radius: 12px;
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -517,4 +520,24 @@ footer {
 
 .toast i {
   font-size: 1.2rem;
+}
+
+/* New status badge styles */
+.status-incomplete {
+  background-color: rgba(249, 115, 22, 0.1);
+  color: var(--incomplete-color);
+}
+
+.status-in-progress {
+  background-color: rgba(139, 92, 246, 0.1);
+  color: var(--in-progress-color);
+}
+
+.status-completed {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--secondary-color);
+}
+
+.toast-info {
+  background: linear-gradient(to right, var(--info-color), #1d4ed8);
 }
